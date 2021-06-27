@@ -1,0 +1,14 @@
+@import "variables";
+
+.form-control {
+  border-radius: 4px;
+  border: solid 1px $default-border;
+}
+
+.form-control {
+  padding: 0.6rem 1rem;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: auto;
+}

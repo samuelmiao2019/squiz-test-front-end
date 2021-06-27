@@ -1,0 +1,17 @@
+<ul class="pagination">
+  <li
+    [class.disabled]="offset === 0">
+    <span class="page-link arrow-icon"
+      (click)="onPrev()"><fa-icon [icon]="preIcon"></fa-icon>
+    </span>
+  </li>
+  <li>
+    <span class="page-link current-page">{{ pageNumber }}</span>
+  </li>
+  <li
+    [class.disabled]="offset + limit >= total">
+    <span class="page-link arrow-icon"
+      (click)="onNext()"><fa-icon [icon]="nextIcon"></fa-icon>
+    </span>
+  </li>
+</ul>

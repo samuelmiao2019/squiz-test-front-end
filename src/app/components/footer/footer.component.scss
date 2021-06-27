@@ -1,0 +1,57 @@
+@import "../../../scss/variables";
+
+.container {
+  padding: 2rem 1rem;
+  max-width: 1400px;
+}
+
+
+.app-footer-inner-container {
+  height: 252px;
+  margin: 0px 96px;
+  padding: 40px 32px 32px;
+  box-shadow: 0 -1px 0 0 #eaebef;
+  background-color: $dark-blue-grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-footer-row-container {
+  display: flex;
+  padding: 40px 32px;
+  flex-direction: row;
+}
+
+.app-footer-content {
+  width: 436px;
+  height: 66px;
+  margin: 0 260px 92px 0;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.app-footer-cpyright {
+  width: 240px;
+  height: 22px;
+  margin: 91px 456px 0 0;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.app-footer-img {
+  width: 216px;
+  height: 67px;
+  object-fit: contain;
+}

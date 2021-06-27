@@ -1,0 +1,12 @@
+{
+  "application.footer.content": "We acknowledge the Traditional Owners of country throught Australia and pay out respects to their elders past, present and emerging.",
+  "application.footer.copyright": "Copyright @ 2021 Samuel M",
+  "application.header.banner.button.label": "Share your idea",
+  "application.header.banner.content": "Lorem imsum dolor sit amet, consectetur adipiscing elit, set do eiusmod tempor incididunt ut labore dolore magna aliqua.",
+  "application.header.banner.title": "Ideas for a better world",
+  "application.ideas.backToIdeas": "Back to ideas",
+  "application.ideas.mask.title": "Do you have an idea that could better our world?",
+  "application.ideas.mask.content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod tempor incididunt.",
+  "application.error": "Sorry, something went wrong loading these results",
+  "application.ideans.create.question": "How can we better our world?"
+}

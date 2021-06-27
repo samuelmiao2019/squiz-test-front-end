@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="ideas-list">
+    <ng-container *ngIf="!(isLoading$ | async); else isLoading">
+      <ng-container *ngIf="!(loadingError$ | async); else isLoadingError">
+        <div *ngIf="ideas?.length < 0" 
+          class="text-muted">(no ideas found)
+        </div>
+        <div *ngIf="ideas?.length > 0" 
+          class="list-wrapper">
+
+          <app-data-table class="w-100"
+            [rows]="ideas"
+            [columns]="columns"
+            [columnMode]="ColumnMode.flex">
+          </app-data-table>
+
+          <ng-template
+            appDataTableColumn
+            let-idea="row"
+            [columnId]="'title'">
+            <span class="d-flex align-items-center">
+              {{ idea.title }}
+            </span>
+          </ng-template>
+
+          <ng-template
+            appDataTableColumn
+            let-idea="row"
+            [columnId]="'description'">
+            <span class="d-flex align-items-center">
+              {{ idea.description}}
+            </span>
+          </ng-template>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <div class="row datatable-footer" *ngIf="limitOptions.length > 1 || offset > 0 || offset + limit > total">
+    <div class="col-7">
+      <label *ngIf="limitOptions.length > 1"
+        class="limit-options d-flex flex-row align-items-center per-page">
+        Show
+        <select class="custom-select custom-select-sm form-control form-control-sm" [(ngModel)]="limit" (change)="onChangeLimit()">
+          <option *ngFor="let value of limitOptions" [value]="value">{{ value }}</option>
+        </select>
+        per page
+      </label>
+    </div>
+    <div class="col-5 d-flex justify-content-end">
+      <app-pagination [limit]="limit" [offset]="offset" [total]="total" (paginate)="onPaginate($event)"></app-pagination>
+    </div>
+  </div>
+</div>
+
+<ng-template #isLoading>
+  <div class="loading">
+    <fa-icon [icon]="spinnerIcon" [spin]="true"></fa-icon>
+  </div>
+</ng-template>
+
+<ng-template #isLoadingError>
+  <div class="text-danger">
+      {{ 'application.error' | translate }}
+  </div>
+</ng-template>

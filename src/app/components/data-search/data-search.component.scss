@@ -1,0 +1,33 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+@import "../../../scss/variables";
+
+.ideas-section {
+  padding: 2rem 0;
+
+  .search-form {
+    display: flex;
+    justify-content: space-between;
+    .search-field {
+      border: none;
+      &::placeholder {
+        color: $placeholder-text;
+      }
+    }
+  }
+
+  .input-group-text {
+    border: none;
+    background-color: white;
+    color: $placeholder-text;
+  }
+}
+
+.loading {
+  text-align: center;
+  font-size: 32px;
+  margin: 2rem;
+  color: lightgrey;
+}

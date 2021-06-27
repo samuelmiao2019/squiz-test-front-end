@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="conditions-section">
+
+    <h3>Explore Ideas</h3>
+
+    <form [formGroup]="searchForm" class="search-form">
+      <div>
+        <div class="input-group mr-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><fa-icon [icon]="searchIcon"></fa-icon></span>
+          </div>
+          <input formControlName="searchTerm" class="search-field form-control mr-2" placeholder="Search ideas...">
+        </div>
+      </div>
+
+      <div>
+        <select formControlName="goal" class="form-control">
+          <option value="">All sustainable development goals</option>
+          <option *ngFor="let goal of goals" [value]="goal.key">{{goal.label}}</option>
+        </select>
+      </div>
+
+    </form>
+</div>
